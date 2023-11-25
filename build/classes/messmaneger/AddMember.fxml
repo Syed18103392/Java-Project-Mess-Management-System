@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="newMemberPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messmaneger.AddMemberController">
+   <children>
+      <AnchorPane fx:id="new_user" layoutX="108.0" layoutY="10.0" prefHeight="612.2264371269671" prefWidth="887.5472017521121" style="-fx-background-color: #3498db;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label blendMode="MULTIPLY" contentDisplay="BOTTOM" layoutX="363.0" layoutY="30.0" text="User Registration" textFill="#f5f2f2">
+               <font>
+                  <Font name="System Bold Italic" size="40.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label layoutX="251.0" layoutY="157.0" text="User name">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userName" layoutX="480.0" layoutY="150.0" prefHeight="34.0" prefWidth="404.0" promptText="Enter User Name" style="-fx-background-color: #ecf0f1; -fx-border-color: #ecf0f1; -fx-border-radius: 10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label layoutX="250.0" layoutY="205.0" text="Gender">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="255.0" text="Contact Number">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="304.0" text="Another Number">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="354.0" text="Profession">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="404.0" text="New Password">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="454.0" text="Confirm Password">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="504.0" text="Address">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ContactNumber" layoutX="480.0" layoutY="250.0" prefHeight="34.0" prefWidth="404.0" promptText="Enter Number" style="-fx-background-color: #ecf0f1; -fx-border-color: #ecf0f1; -fx-border-radius: 10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="GurdianPhone" layoutX="480.0" layoutY="300.0" prefHeight="34.0" prefWidth="404.0" promptText="Enter Number" style="-fx-background-color: #ecf0f1; -fx-border-color: #ecf0f1; -fx-border-radius: 10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <TextField fx:id="Profession" layoutX="480.0" layoutY="350.0" prefHeight="34.0" prefWidth="404.0" promptText="Enter Profession" style="-fx-background-color: #ecf0f1; -fx-border-color: #ecf0f1; -fx-border-radius: 10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <PasswordField fx:id="UserPassword" focusTraversable="false" layoutX="480.0" layoutY="400.0" prefHeight="26.0" prefWidth="404.0" promptText="Enter Your Password" style="-fx-background-color: #ecf0f1; -fx-border-color: #ecf0f1; -fx-border-radius: 10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </PasswordField>
+            <PasswordField fx:id="ConfirmPassword" focusTraversable="false" layoutX="480.0" layoutY="450.0" prefHeight="26.0" prefWidth="404.0" promptText="Enter Re Password" style="-fx-background-color: #ecf0f1; -fx-border-color: #ecf0f1; -fx-border-radius: 10;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </PasswordField>
+            <RadioButton fx:id="male" layoutX="492.0" layoutY="199.0" lineSpacing="5.0" mnemonicParsing="false" selected="true" text="Male">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <toggleGroup>
+                  <ToggleGroup fx:id="a" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="female" layoutX="610.0" layoutY="199.0" lineSpacing="5.0" mnemonicParsing="false" text="Female" toggleGroup="$a">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <Button fx:id="UserSignUp" graphicTextGap="8.0" layoutX="698.0" layoutY="575.0" mnemonicParsing="false" onAction="#handelUserRegistration" prefHeight="32.0" prefWidth="189.0" style="-fx-background-color: #2980b9; -fx-border-radius: 15px;" text="Sign Up" textFill="#f5f3f3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <TextArea fx:id="UserAddress" layoutX="480.0" layoutY="500.0" prefHeight="49.0" prefWidth="404.0" promptText="Address" style="-fx-border-radius: 10; -fx-background-color: #ecf0f1;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextArea>
+            <ImageView fitHeight="183.0" fitWidth="175.0" layoutX="24.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../NetBeansProjects/test/mess/src/mess/images/login.png" />
+               </image>
+            </ImageView>
+            <MenuBar style="-fx-background-color: #3498db;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handelMenuHome" text="Home" />
+                        <MenuItem mnemonicParsing="false" onAction="#handelClose" text="Close" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem fx:id="addMember" mnemonicParsing="false" onAction="#handelNewUser" text="Add Memeber" />
+                        <MenuItem mnemonicParsing="false" text="Delete Member" />
+                        <MenuItem mnemonicParsing="false" text="Update Member" />
+                        <MenuItem mnemonicParsing="false" text="Update Members" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Meel">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Add Meal" />
+                        <MenuItem mnemonicParsing="false" text="View meal" />
+                        <MenuItem mnemonicParsing="false" text="Edit Todays Meel" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Bazar">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handelAddBazar" text="Add Bazar" />
+                        <MenuItem mnemonicParsing="false" text="View  Bazar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Member">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Add Credit" />
+                        <MenuItem mnemonicParsing="false" text="View Meal" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="about_pane" prefHeight="660.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="105.0" layoutY="508.0" text="Softwear Version : 1.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="780.0" layoutY="494.0" text="Develop By SyedSajib.">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="852.0" layoutY="522.0" text="ID : 18103392">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="599.0" layoutY="560.0" text="International University of Bussiness Agricultural and Technology">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Text fill="#474545" layoutX="276.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mess Management System&#10;&#10;Feature List&#10;1.Managing Members&#10;2.Managing Meel&#10;3.Managing Additional Charge&#10;4.Managing Total Cost &#10;5.Manage Bazar&#10;" wrappingWidth="437.6805725097656">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="450.0" layoutY="87.0" text="About">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="489.0" layoutY="429.0" orientation="VERTICAL" prefHeight="200.0" />
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelMenuHome" text="Home" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelClose" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem fx:id="addMember" mnemonicParsing="false" onAction="#handelNewUser" text="Add Memeber" />
+                  <MenuItem fx:id="addMember1" mnemonicParsing="false" onAction="#handelAddAdditionalCharge" text="Add Aditional Charge" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Meel">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddMeel" text="Add Meal" />
+                  <MenuItem mnemonicParsing="false" text="View meal" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelEditMeel" text="Edit Todays Meel" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Bazar">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddBazar" text="Add Bazar" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelViewBazar" text="View  Bazar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Member">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddCredit" text="Add Credit" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelMonthlyReport" text="Monthly Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelMonthlyTotallReport" text="Monthly Totall Report" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAbout" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+   </children>
+</AnchorPane>

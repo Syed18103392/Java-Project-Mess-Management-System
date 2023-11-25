@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="bazarView" prefHeight="660.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messmaneger.ViewbazarController">
+   <children>
+      <TableView fx:id="table_bazar" layoutX="43.0" layoutY="89.0" prefHeight="528.0" prefWidth="898.0">
+        <columns>
+          <TableColumn fx:id="col_date" prefWidth="170.26409530639648" text="Date" />
+          <TableColumn fx:id="col_time" prefWidth="115.92463684082031" text="Time" />
+            <TableColumn fx:id="col_name" prefWidth="215.54708862304688" text="Member name" />
+            <TableColumn fx:id="col_list" prefWidth="249.05657958984375" text="List" />
+            <TableColumn fx:id="col_cost" prefWidth="148.5283203125" text="Totall Cost" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <MenuBar layoutX="24.0" layoutY="18.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelMenuHome" text="Home" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelClose" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem fx:id="addMember" mnemonicParsing="false" onAction="#handelNewUser" text="Add Memeber" />
+                  <MenuItem fx:id="addMember1" mnemonicParsing="false" onAction="#handelAddAdditionalCharge" text="Add Aditional Charge" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Meel">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddMeel" text="Add Meal" />
+                  <MenuItem mnemonicParsing="false" text="View meal" />
+                  <MenuItem mnemonicParsing="false" text="Edit Todays Meel" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Bazar">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddBazar" text="Add Bazar" />
+                  <MenuItem mnemonicParsing="false" text="View  Bazar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Member">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddCredit" text="Add Credit" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelMonthlyReport" text="Monthly Report" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAbout" text="About" />
+               </items>
+            </Menu>
+         </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+   </children>
+</AnchorPane>

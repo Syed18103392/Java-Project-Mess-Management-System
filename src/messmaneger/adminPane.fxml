@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="adminHome" prefHeight="660.0" prefWidth="983.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messmaneger.AdminPaneController">
+   <children>
+      <MenuBar layoutX="14.0" layoutY="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handelMenuHome" text="Home" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="addMember" mnemonicParsing="false" onAction="#handelNewUser" text="Add Memeber" />
+                  <MenuItem fx:id="addMember1" mnemonicParsing="false" onAction="#handelAddAdditionalCharge" text="Add Aditional Charge" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Meel">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handelAddMeel" text="Add Meal" />
+                  <MenuItem mnemonicParsing="false" text="View meal" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelEditMeel" text="Edit Todays Meel" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Bazar">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddBazar" text="Add Bazar" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelViewBazar" text="View  Bazar" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Member">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAddCredit" text="Add Credit" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelMonthlyReport" text="Monthly Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#handelMonthlyTotallReport" text="Monthly Totall Report" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handelAbout" text="About" />
+               </items>
+            </Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </MenuBar>
+      <TextField fx:id="sMember" layoutX="376.0" layoutY="80.0" prefHeight="26.0" prefWidth="216.0" promptText="Search Member" />
+      <Button layoutX="606.0" layoutY="80.0" mnemonicParsing="false" onAction="#handelSearch" text="Search" />
+      <TitledPane fx:id="sResult" expanded="false" layoutX="313.0" layoutY="128.0" prefHeight="271.0" prefWidth="357.0" text="Search Result" visible="false">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="210.0" prefWidth="355.0">
+               <children>
+                  <Label layoutX="40.0" layoutY="44.0" text="Member Name :">
+                     <font>
+                        <Font name="System Bold" size="11.773585319519043" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="72.0" text="Contact Number :" />
+                  <Label layoutX="40.0" layoutY="105.0" text="Credit :" />
+                  <Label layoutX="40.0" layoutY="132.0" text="Total Meal :">
+                     <font>
+                        <Font name="System Bold" size="11.773585319519043" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sName" layoutX="164.0" layoutY="44.0" text="s" />
+                  <Label fx:id="sNumber" layoutX="164.0" layoutY="74.0" text="s" />
+                  <Label fx:id="sCredit" layoutX="164.0" layoutY="105.0" text="s" />
+                  <Label fx:id="sMeal" layoutX="164.0" layoutY="132.0" text="s" />
+                  <Button layoutX="60.0" layoutY="196.0" mnemonicParsing="false" onAction="#handelUpdateMember" text="Edit" />
+                  <Button layoutX="259.0" layoutY="196.0" mnemonicParsing="false" onAction="#handelMemberDelete" text="Delete" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <AnchorPane id="AnchorPane" fx:id="updatePane" layoutX="191.0" layoutY="106.0" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="94.0" layoutY="116.0" text="Name :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="155.0" text="Contact Number :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="191.0" text="Credit :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="231.0" text="Address :">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="uName" layoutX="300.0" layoutY="116.0" prefHeight="26.0" prefWidth="209.0" />
+            <TextField fx:id="uNumber" layoutX="300.0" layoutY="154.0" prefHeight="26.0" prefWidth="209.0" />
+            <TextField fx:id="uCredit" layoutX="300.0" layoutY="190.0" prefHeight="26.0" prefWidth="215.0" />
+            <TextArea fx:id="uAddress" layoutX="300.0" layoutY="231.0" prefHeight="93.0" prefWidth="216.0" />
+            <Button layoutX="397.0" layoutY="349.0" mnemonicParsing="false" onAction="#UpdateInfo" text="Update Information" />
+            <Label layoutX="185.0" layoutY="23.0" text="Update Member Information" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="92.0" layoutY="77.0" text="Member ID :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="memberId" layoutX="300.0" layoutY="77.0" text="Member ID :">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="671.0" layoutY="601.0" text="Current Meal Rate :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cMeelRate" layoutX="846.0" layoutY="601.0" text="0.0" textFill="#047838">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cMeelRate1" layoutX="916.0" layoutY="601.0" text="TAKA">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="671.0" layoutY="573.0" text="Total Bazar  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="671.0" layoutY="545.0" text="Total Meal  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cTotallMeel" layoutX="846.0" layoutY="545.0" text="0.0" textFill="#047838">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cMeelBazar" layoutX="846.0" layoutY="573.0" text="0.0" textFill="#047838">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cMeelRate11" layoutX="915.0" layoutY="573.0" text="TAKA">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="673.0" layoutY="517.0" text="Todays Meal  :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cTodayMeel" layoutX="846.0" layoutY="517.0" text="0.0" textFill="#047838">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
